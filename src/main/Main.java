@@ -1,8 +1,20 @@
 package main;
 
-public class Main {
+import java.awt.*;
+
+public class Main extends Engine {
 
     public static void main(String[] args) {
-        System.out.println("Hello github");
+        new Main().start(); // Creates the game engine and starts it.
+    }
+
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void draw(Graphics g) {
+
     }
 }
