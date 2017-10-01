@@ -89,6 +89,7 @@ public class Main extends Canvas implements Runnable {
     }
 
     private void draw(Graphics g) {
-
+    	g.setColor(new Color(255,0,0));
+    	g.fillRect(100, 100, 50, 50);
     }
 }
