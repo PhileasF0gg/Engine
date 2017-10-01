@@ -87,7 +87,7 @@ public class Main extends Canvas implements Runnable {
         bs.show();
         g.dispose();
     }
-    //Hello Jack
+
     private void draw(Graphics g) {
 
     }
