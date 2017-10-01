@@ -71,7 +71,7 @@ public class Main extends Canvas implements Runnable {
     }
 
     private void update() {
-
+        System.out.println("Hello_world");
     }
 
     private void render() {
