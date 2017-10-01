@@ -8,11 +8,10 @@ public class Engine extends Canvas implements Runnable {
 
     private static final String TITLE = "Game"; // The title that is shown on the frame window.
     private static final int WIDTH = 800, HEIGHT = 600, FPS = 60; // The dimensions and frame rate of the game.
-    private JFrame frame;
     private boolean running; // Is true if the game is running.
 
     public Engine() {
-        frame = new JFrame();
+        JFrame frame = new JFrame();
         frame.setTitle(TITLE);
         frame.setResizable(false); // Disables the ability to resize the window.
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -23,12 +22,12 @@ public class Engine extends Canvas implements Runnable {
         frame.setVisible(true);
     }
 
-    public void start() {
+    protected void start() {
         new Thread(this).start(); // Creates a new thread for the game to run on.
         running = true;
     }
 
-    public void stop() {
+    private void stop() {
         running = false;
         Thread.currentThread().stop(); // Terminates the currently running thread.
     }
@@ -83,7 +82,7 @@ public class Engine extends Canvas implements Runnable {
 
     }
 
-    public void render() {
+    private void render() {
         BufferStrategy bs = getBufferStrategy();
         if(bs == null) { // If there is no buffer strategy then one is created.
             createBufferStrategy(3);
