@@ -87,7 +87,7 @@ public class Main extends Canvas implements Runnable {
         bs.show();
         g.dispose();
     }
-    //Hello Jack
+
     private void draw(Graphics g) {
     	g.setColor(new Color(255,0,0));
     	g.fillRect(100, 100, 50, 50);
