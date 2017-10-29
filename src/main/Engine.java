@@ -9,7 +9,7 @@ import java.awt.image.BufferStrategy;
 public class Engine extends Canvas implements Runnable {
 
     private static final String TITLE = "Game"; // The title that is shown on the frame window.
-    private static final int WIDTH = 800, HEIGHT = 600, FPS = 60; // The dimensions and frame rate of the game.
+    public static final int WIDTH = 800, HEIGHT = 600, FPS = 60; // The dimensions and frame rate of the game.
     private boolean running; // Is true if the game is running.
 
     public Engine() {

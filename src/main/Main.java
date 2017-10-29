@@ -11,11 +11,12 @@ public class Main extends Engine {
     public static void main(String[] args) {
         new Main().start(); // Creates the game engine and starts it.
         map = new Map();
+        map.setCurrentMap(0);
     }
 
     @Override
     public void update() {
-
+        map.update();
     }
 
     @Override
