@@ -1,7 +1,5 @@
 package map;
 
-import java.awt.image.BufferedImage;
-
 public class TileMap {
 
     public static final int TILE_WIDTH = 50, TILE_HEIGHT = 50; // Width and height of the tiles (in pixels).
@@ -27,10 +25,12 @@ public class TileMap {
     }
 
     public int getWidth() {
+        // Returns the amount of tiles wide the map is.
         return width;
     }
 
     public int getHeight() {
+        // Returns the amount of tiles high the map is.
         return height;
     }
 

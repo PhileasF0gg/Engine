@@ -77,7 +77,7 @@ public class Engine extends Canvas implements Runnable {
                 lastTimer += 5000;
                 updates /= 5; // Calculates the average update rate over five seconds.
                 frames /= 5; // Calculates the average frame rate over five seconds.
-                devDetails = "Updates: " + updates + ", Frames: " + frames;
+                devDetails = "Updates: " + updates + ", Frames: " + frames + "\n";
                 System.out.printf(devDetails);
                 updates = 0;
                 frames = 0;
