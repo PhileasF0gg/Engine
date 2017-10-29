@@ -1,5 +1,7 @@
 package main;
 
+import map.TileMap;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -71,7 +73,7 @@ public class Engine extends Canvas implements Runnable {
                 lastTimer += 5000;
                 updates /= 5; // Calculates the average update rate over five seconds.
                 frames /= 5; // Calculates the average frame rate over five seconds.
-                System.out.printf("Updates: %d, Frames: %d", updates, frames);
+                System.out.printf("Updates: %d, Frames: %d\n", updates, frames);
                 updates = 0;
                 frames = 0;
             }
