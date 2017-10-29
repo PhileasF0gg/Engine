@@ -17,6 +17,7 @@ public class Main extends Engine {
     @Override
     public void update() {
         map.update();
+
     }
 
     @Override

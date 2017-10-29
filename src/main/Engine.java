@@ -10,7 +10,9 @@ public class Engine extends Canvas implements Runnable {
 
     private static final String TITLE = "Game"; // The title that is shown on the frame window.
     public static final int WIDTH = 800, HEIGHT = 600, FPS = 60; // The dimensions and frame rate of the game.
-    private boolean running; // Is true if the game is running.
+    private boolean running; // Running is true if the game is running.
+    private String devDetails = "Empty";
+
 
     public Engine() {
         JFrame frame = new JFrame();
@@ -21,6 +23,8 @@ public class Engine extends Canvas implements Runnable {
         frame.add(this);
         frame.pack(); // Wraps the window around the canvas to the correct size.
         frame.setLocationRelativeTo(null); // Moves the window to the center of the screen.
+        frame.setFocusable(true);
+        frame.addKeyListener(new InputHandler());
         frame.setVisible(true);
     }
 
@@ -73,7 +77,8 @@ public class Engine extends Canvas implements Runnable {
                 lastTimer += 5000;
                 updates /= 5; // Calculates the average update rate over five seconds.
                 frames /= 5; // Calculates the average frame rate over five seconds.
-                System.out.printf("Updates: %d, Frames: %d\n", updates, frames);
+                devDetails = "Updates: " + updates + ", Frames: " + frames;
+                System.out.printf(devDetails);
                 updates = 0;
                 frames = 0;
             }
@@ -94,6 +99,11 @@ public class Engine extends Canvas implements Runnable {
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, WIDTH, HEIGHT); // Covers the screen with a black background.
         draw(g);
+        if(InputHandler.isDevMode()) {
+            g.setColor(Color.RED);
+            g.setFont(new Font("Arial", Font.BOLD, 15));
+            g.drawString(devDetails, 20, 50);
+        }
         bs.show();
         g.dispose();
     }
@@ -101,4 +111,5 @@ public class Engine extends Canvas implements Runnable {
     public void draw(Graphics g) {
 
     }
+
 }

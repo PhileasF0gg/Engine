@@ -1,9 +1,11 @@
 package map;
 
 import main.Engine;
+import main.InputHandler;
 import main.Main;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class Map {
@@ -44,8 +46,10 @@ public class Map {
                                 m.TILE_WIDTH, m.TILE_HEIGHT,
                                 null);
                     }
-                    g.setColor(Color.WHITE);
-                    g.drawRect((ix * m.TILE_WIDTH) + offsetX, (iy * m.TILE_HEIGHT) + offsetY, m.TILE_WIDTH, m.TILE_HEIGHT);
+                    if(InputHandler.isDevMode()) {
+                        g.setColor(Color.WHITE);
+                        g.drawRect((ix * m.TILE_WIDTH) + offsetX, (iy * m.TILE_HEIGHT) + offsetY, m.TILE_WIDTH, m.TILE_HEIGHT);
+                    }
                 }
             }
         }
