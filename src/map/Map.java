@@ -12,6 +12,7 @@ public class Map {
     private int offsetX, offsetY, currentMap;
 
     public Map() {
+        Textures.initTextures();
         maps.add(new TileMap(10, 10));
         currentMap = -1; // The game will not try to render if the map value is smaller than 0.
     }
@@ -37,8 +38,11 @@ public class Map {
             for (int ix = 0; ix < m.getWidth(); ix++) {
                 for (int iy = 0; iy < m.getHeight(); iy++) {
                     if (m.getTileAt(ix, iy) != 0) {
-                        g.setColor(Color.GREEN);
-                        g.fillRect((ix * m.TILE_WIDTH) + offsetX, (iy * m.TILE_HEIGHT) + offsetY, m.TILE_WIDTH, m.TILE_HEIGHT);
+                        g.drawImage(Textures.tileTextures[m.getTileAt(ix, iy)],
+                                (ix * m.TILE_WIDTH) + offsetX,
+                                (iy * m.TILE_HEIGHT) + offsetY,
+                                m.TILE_WIDTH, m.TILE_HEIGHT,
+                                null);
                     }
                     g.setColor(Color.WHITE);
                     g.drawRect((ix * m.TILE_WIDTH) + offsetX, (iy * m.TILE_HEIGHT) + offsetY, m.TILE_WIDTH, m.TILE_HEIGHT);
