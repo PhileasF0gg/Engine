@@ -18,16 +18,16 @@ public class Player extends Entity {
 
     @Override
     public void update() {
-        if(InputHandler.getInputStatus().equals(KeyEvent.VK_UP + "_pressed")) {
+        if(InputHandler.upPressed()) {
             y -= speed;
         }
-        if(InputHandler.getInputStatus().equals(KeyEvent.VK_DOWN + "_pressed")) {
+        if(InputHandler.downPressed()) {
             y += speed;
         }
-        if(InputHandler.getInputStatus().equals(KeyEvent.VK_LEFT + "_pressed")) {
+        if(InputHandler.leftPressed()) {
             x -= speed;
         }
-        if(InputHandler.getInputStatus().equals(KeyEvent.VK_RIGHT + "_pressed")) {
+        if(InputHandler.rightPressed()) {
             x += speed;
         }
     }

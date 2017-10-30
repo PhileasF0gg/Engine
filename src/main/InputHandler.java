@@ -6,16 +6,40 @@ import java.awt.event.KeyEvent;
 public class InputHandler extends KeyAdapter {
 
     private static String inputStatus = ""; // Only to be used for simple key presses. Game controls will have their own variables.
-    private static boolean devMode = false, keyUnstuck = true, left, right, up, down;
+    private static boolean devMode = false, keyUnstuck = true, left = false, right = false, up = false, down = false;
 
     @Override
     public void keyPressed(KeyEvent e) {
         inputStatus = e.getKeyCode() + "_pressed";
+        if(e.getKeyCode() == KeyEvent.VK_UP) {
+            up = true;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+            down = true;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+            left = true;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            right = true;
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
         inputStatus = e.getKeyCode() + "_released";
+        if(e.getKeyCode() == KeyEvent.VK_UP) {
+            up = false;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+            down = false;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+            left = false;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            right = false;
+        }
     }
 
     public static String getInputStatus() {
@@ -35,5 +59,21 @@ public class InputHandler extends KeyAdapter {
             keyUnstuck = true;
         }
         return devMode;
+    }
+
+    public static boolean upPressed() {
+        return up;
+    }
+
+    public static boolean downPressed() {
+        return down;
+    }
+
+    public static boolean leftPressed() {
+        return left;
+    }
+
+    public static boolean rightPressed() {
+        return right;
     }
 }
