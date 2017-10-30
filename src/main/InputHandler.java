@@ -5,8 +5,8 @@ import java.awt.event.KeyEvent;
 
 public class InputHandler extends KeyAdapter {
 
-    private static String inputStatus = "";
-    private static boolean devMode = false, keyUnstuck = true;
+    private static String inputStatus = ""; // Only to be used for simple key presses. Game controls will have their own variables.
+    private static boolean devMode = false, keyUnstuck = true, left, right, up, down;
 
     @Override
     public void keyPressed(KeyEvent e) {
