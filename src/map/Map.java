@@ -47,7 +47,7 @@ public class Map {
             for (int ix = 0; ix < m.getWidth(); ix++) {
                 for (int iy = 0; iy < m.getHeight(); iy++) {
                     if (m.getTileAt(ix, iy) != 0) {
-                        g.drawImage(Textures.tileTextures[m.getTileAt(ix, iy)],
+                        g.drawImage(Tile.getTileById(m.getTileAt(ix, iy)).getTexture(),
                                 (ix * m.TILE_WIDTH) + offsetX,
                                 (iy * m.TILE_HEIGHT) + offsetY,
                                 m.TILE_WIDTH, m.TILE_HEIGHT,
