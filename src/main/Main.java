@@ -17,11 +17,16 @@ public class Main extends Engine {
     @Override
     public void update() {
         map.update();
-
     }
 
     @Override
     public void draw(Graphics g) {
         map.draw(g);
+        if(InputHandler.isDevMode()) {
+            g.setColor(Color.RED);
+            g.setFont(new Font("Arial", Font.BOLD, 15));
+            g.drawString(getDevDetails(), 20, 50);
+            g.drawString(map.getPlayerLoc(), 20, 70);
+        }
     }
 }

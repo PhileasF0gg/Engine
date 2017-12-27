@@ -1,6 +1,7 @@
 package entities;
 
 import main.InputHandler;
+import map.TileMap;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -8,6 +9,7 @@ import java.awt.event.KeyEvent;
 public class Player extends Entity {
 
     private int speed;
+    private int TileLocX, TileLocY; // X and Y location on the tile map.
 
     public Player(int startX, int startY) {
         super(startX, startY);
@@ -18,6 +20,8 @@ public class Player extends Entity {
 
     @Override
     public void update() {
+        TileLocX = x / TileMap.TILE_WIDTH;
+        TileLocY = y / TileMap.TILE_HEIGHT;
         if(InputHandler.upPressed()) {
             y -= speed;
         }
@@ -30,6 +34,15 @@ public class Player extends Entity {
         if(InputHandler.rightPressed()) {
             x += speed;
         }
+
+    }
+
+    public int getTileLocX() {
+        return TileLocX; // Returns the X location on the tile map.
+    }
+
+    public int getTileLocY() {
+        return TileLocY; // Returns the Y location on the tile map.
     }
 
     @Override

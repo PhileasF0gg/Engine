@@ -99,17 +99,16 @@ public class Engine extends Canvas implements Runnable {
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, WIDTH, HEIGHT); // Covers the screen with a black background.
         draw(g);
-        if(InputHandler.isDevMode()) {
-            g.setColor(Color.RED);
-            g.setFont(new Font("Arial", Font.BOLD, 15));
-            g.drawString(devDetails, 20, 50);
-        }
         bs.show();
         g.dispose();
     }
 
     public void draw(Graphics g) {
 
+    }
+
+    public String getDevDetails() {
+        return devDetails; // Returns developer details about the state of the engine.
     }
 
 }

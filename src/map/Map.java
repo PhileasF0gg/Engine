@@ -69,4 +69,10 @@ public class Map {
         }
         p.draw(g, offsetX, offsetY);
     }
+
+    public String getPlayerLoc() {
+        return "X: " + p.getX() + ", Y: " + p.getY() +
+                ", Tile X: " + p.getTileLocX() + ", Tile Y: " + p.getTileLocY(); // Returns a string containing the location of the player.
+    }
+
 }

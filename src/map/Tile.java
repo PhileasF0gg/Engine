@@ -23,6 +23,7 @@ public class Tile {
         for(int i = 0; i < Textures.tileTextures.length; i++) {
             new Tile(Textures.tileTextures[i]); // Creates a tile object for every tile texture.
         }
+        tiles.get(0).solid = true;
         tiles.get(3).solid = true;
     }
 

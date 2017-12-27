@@ -46,7 +46,10 @@ public class TileMap {
     }
 
     public int getTileAt(int x, int y) {
-        return tiles[x][y]; // Returns the tile ID at the specified coordinates.
+        if(x >= 0 && y >= 0 && x < width && y < height) {
+            return tiles[x][y]; // Returns the tile ID at the specified coordinates.
+        }
+        return 0;
     }
 
     public int getWidth() {
