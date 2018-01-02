@@ -20,7 +20,7 @@ public class Map {
         maps.add(new TileMap(10, 10)); // (Map ID: 0) is just a test map.
         maps.get(0).load("res/test.tm"); // Loads the test map file.
         currentMap = -1; // The game will not try to render if the map value is smaller than 0.
-        p = new Player(10, 10);
+        p = new Player(0, 0);
     }
 
     public void update() {
