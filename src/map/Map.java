@@ -1,12 +1,9 @@
 package map;
 
 import entities.Player;
-import main.Engine;
-import main.InputHandler;
-import main.Main;
+import main.*;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class Map {
@@ -17,15 +14,48 @@ public class Map {
 
     public Map() {
         Textures.initTextures();
-        maps.add(new TileMap(10, 10)); // (Map ID: 0) is just a test map.
+        maps.add(new TileMap(20, 20)); // (Map ID: 0) is just a test map.
         maps.get(0).load("res/test.tm"); // Loads the test map file.
         currentMap = -1; // The game will not try to render if the map value is smaller than 0.
         p = new Player(0, 0);
     }
 
     public void update() {
+        checkPlayerCollision();
         p.update();
         setFocusPoint(p.getX(), p.getY());
+    }
+
+    private void checkPlayerCollision() {
+        if(p.getTileLocX() - 1 >= 0 && !Tile.getTileById(maps.get(currentMap)
+                .getTileAt(p.getTileLocX() - 1, p.getTileLocY())).isSolid()) {
+            p.blockLeft(false);
+        }else {
+            p.blockLeft(true);
+        }
+
+        if(p.getTileLocX() + 1 < maps.get(currentMap).getWidth() && !Tile.getTileById(maps.get(currentMap)
+                .getTileAt(p.getTileLocX() + 1, p.getTileLocY())).isSolid()) {
+            p.blockRight(false);
+        }else {
+            p.blockRight(true);
+        }
+
+        if(p.getTileLocY() - 1 >= 0 && !Tile.getTileById(maps.get(currentMap)
+                .getTileAt(p.getTileLocX(), p.getTileLocY() - 1)).isSolid()) {
+            p.blockUp(false);
+        }else {
+            p.blockUp(true);
+        }
+
+        if(p.getTileLocY() + 1 < maps.get(currentMap).getHeight() && !Tile.getTileById(maps.get(currentMap)
+                .getTileAt(p.getTileLocX(), p.getTileLocY() + 1)).isSolid()) {
+            p.blockDown(false);
+        }else {
+            p.blockDown(true);
+        }
+
+
     }
 
     public void setCurrentMap(int index) {
@@ -70,9 +100,18 @@ public class Map {
         p.draw(g, offsetX, offsetY);
     }
 
-    public String getPlayerLoc() {
+    public String getPlrLoc() {
         return "X: " + p.getX() + ", Y: " + p.getY() +
                 ", Tile X: " + p.getTileLocX() + ", Tile Y: " + p.getTileLocY(); // Returns a string containing the location of the player.
+    }
+
+    public String getPlrMovement() {
+        return "X dir: " + p.getDirX() + ", X dest: " + p.getDestX() +
+                ", Y dir: " + p.getDirY() + ", Y dest: " + p.getDestY(); // Returns a string containing details about the movement of the player.
+    }
+
+    public String getPlrCollision() {
+        return "(Collisions) " + p.getCollisions();
     }
 
 }

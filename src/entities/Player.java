@@ -8,10 +8,10 @@ import java.awt.event.KeyEvent;
 
 public class Player extends Entity {
 
-    private int speed = 5;
+    private int speed = 3;
     private int tileLocX, tileLocY; // X and Y location on the tile map.
-    private int destX, destY; // The X and Y destinations for the player to go.
-    private boolean upCollide, downCollide, leftCollide, rightCollide;
+    private int destX, destY, dirX, dirY; // The X and Y destinations for the player to go.
+    private boolean upCollide, downCollide, leftCollide, rightCollide, moving;
 
     public Player(int tileX, int tileY) {
         super(tileX * TileMap.TILE_WIDTH, tileY * TileMap.TILE_HEIGHT);
@@ -21,38 +21,70 @@ public class Player extends Entity {
         y += (TileMap.TILE_HEIGHT / 2) - (h / 2); // Centres the player on its staring tile.
         destX = x; // Sets the destination X to the starting point to prevent unnecessary movement.
         destY = y; // Sets the destination Y to the starting point to prevent unnecessary movement.
-        speed = 5;
     }
 
     @Override
     public void update() {
         tileLocX = x / TileMap.TILE_WIDTH;
         tileLocY = y / TileMap.TILE_HEIGHT;
-        if(InputHandler.upPressed() && y == destY && !upCollide) {
-            destY -= TileMap.TILE_HEIGHT;
+
+        if(InputHandler.upPressed() && y == destY && x == destX && !upCollide) { // If there is no collision one tile up.
+            destY -= TileMap.TILE_HEIGHT; // A new destination is created for one tile up.
+            dirY = -1;
         }
-        if(InputHandler.downPressed() && y == destY && !downCollide) {
-            destY += TileMap.TILE_HEIGHT;
+        if(InputHandler.downPressed() && y == destY && x == destX && !downCollide) { // If there is no collision one tile down.
+            destY += TileMap.TILE_HEIGHT; // A new destination is created for one tile down.
+            dirY = 1;
         }
-        if(InputHandler.leftPressed() && x == destX && !leftCollide) {
-            destX -= TileMap.TILE_WIDTH;
+        if(InputHandler.leftPressed() && y == destY && x == destX && !leftCollide) { // If there is no collision one tile left.
+            destX -= TileMap.TILE_WIDTH; // A new destination is created for one tile left.
+            dirX = -1;
         }
-        if(InputHandler.rightPressed() && x == destX && !rightCollide) {
-            destX += TileMap.TILE_WIDTH;
+        if(InputHandler.rightPressed() && y == destY && x == destX && !rightCollide) { // If there is no collision one tile right.
+            destX += TileMap.TILE_WIDTH; // A new destination is created for one tile right.
+            dirX = 1;
         }
 
-        if(x < destX) {
+        moving = false;
+
+        if(x < destX && dirX == 1) {
             x += speed;
-        }else if(x > destX) {
+            moving = true;
+        }else if(x > destX && dirX == -1) {
             x -= speed;
+            moving = true;
         }
 
-        if(y < destY) {
+        if(y < destY && dirY == 1) {
             y += speed;
-        }else if(y > destY) {
+            moving = true;
+        }else if(y > destY && dirY == -1) {
             y -= speed;
+            moving = true;
         }
 
+        if(!moving) {
+            if(x != destX || y != destY) { // If the player did not reach the destination successfully.
+                x = destX; // Jumps the player to the correct X coordinate.
+                y = destY; // Jumps the player to the correct Y coordinate.
+            }
+        }
+    }
+
+    public void blockLeft(boolean block) {
+        leftCollide = block;
+    }
+
+    public void blockRight(boolean block) {
+        rightCollide = block;
+    }
+
+    public void blockUp(boolean block) {
+        upCollide = block;
+    }
+
+    public void blockDown(boolean block) {
+        downCollide = block;
     }
 
     public int getTileLocX() {
@@ -61,6 +93,27 @@ public class Player extends Entity {
 
     public int getTileLocY() {
         return tileLocY; // Returns the Y location on the tile map.
+    }
+
+    public int getDestX() {
+        return destX; // Returns X destination.
+    }
+
+    public int getDestY() {
+        return destY; // Returns Y destination.
+    }
+
+    public int getDirX() {
+        return dirX; // Returns the X direction.
+    }
+
+    public int getDirY() {
+        return dirY; // Returns the Y direction.
+    }
+
+    public String getCollisions() {
+        return "L: " +  leftCollide + ", R: "
+                + rightCollide + ", U: " + upCollide + ", D: " + downCollide; // Returns details about the players collision.
     }
 
     @Override

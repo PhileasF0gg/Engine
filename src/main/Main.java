@@ -26,7 +26,9 @@ public class Main extends Engine {
             g.setColor(Color.RED);
             g.setFont(new Font("Arial", Font.BOLD, 15));
             g.drawString(getDevDetails(), 20, 50);
-            g.drawString(map.getPlayerLoc(), 20, 70);
+            g.drawString(map.getPlrLoc(), 20, 70);
+            g.drawString(map.getPlrMovement(), 20, 90);
+            g.drawString(map.getPlrCollision(), 20, 110);
         }
     }
 }
