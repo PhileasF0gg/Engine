@@ -7,7 +7,7 @@ public class Tile {
     private static ArrayList<Tile> tiles = new ArrayList<Tile>(); // Holds all the tile objects.
     private int id; // Holds the ID value for the tile.
     private BufferedImage texture;
-    private boolean solid = false;
+    private boolean solid = false, overlay = false;
 
     static {
         init_tiles();
@@ -33,6 +33,10 @@ public class Tile {
 
     public boolean isSolid() {
         return solid;
+    }
+
+    public boolean isOverlay() {
+        return overlay;
     }
 
     public BufferedImage getTexture() {

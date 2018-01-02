@@ -11,6 +11,7 @@ public class Map {
     private static ArrayList<TileMap> maps = new ArrayList<TileMap>(); // Holds all of the TileMap objects.
     private int offsetX, offsetY, currentMap;
     private Player p;
+    private ArrayList<Overlay> overlayedTiles;
 
     public Map() {
         Textures.initTextures();
@@ -74,15 +75,20 @@ public class Map {
     public void draw(Graphics g) {
         if(currentMap >= 0) { // Makes sure the map number is not a negative number as they do not exist.
             TileMap m = maps.get(currentMap);
+            overlayedTiles = new ArrayList<Overlay>();
             for (int ix = 0; ix < m.getWidth(); ix++) {
                 for (int iy = 0; iy < m.getHeight(); iy++) {
                     if (m.getTileAt(ix, iy) != 0) {
-                        g.drawImage(Tile.getTileById(m.getTileAt(ix, iy)).getTexture(),
-                                (ix * m.TILE_WIDTH) + offsetX,
-                                (iy * m.TILE_HEIGHT) + offsetY,
-                                m.TILE_WIDTH, m.TILE_HEIGHT,
-                                null);
-                        // The tile texture is drawn depending on its ID value.
+                        if(!Tile.getTileById(m.getTileAt(ix, iy)).isOverlay()) {
+                            g.drawImage(Tile.getTileById(m.getTileAt(ix, iy)).getTexture(),
+                                    (ix * m.TILE_WIDTH) + offsetX,
+                                    (iy * m.TILE_HEIGHT) + offsetY,
+                                    m.TILE_WIDTH, m.TILE_HEIGHT,
+                                    null);
+                            // The tile texture is drawn depending on its ID value.
+                        }else {
+                            overlayedTiles.add(new Overlay(m.getTileAt(ix, iy), ix, iy));
+                        }
                     }
                     if(InputHandler.isDevMode()) {
                         g.setColor(Color.WHITE);
@@ -98,6 +104,16 @@ public class Map {
             }
         }
         p.draw(g, offsetX, offsetY);
+        drawOverlay(g);
+    }
+
+    private void drawOverlay(Graphics g) {
+        for(int i = 0; i < overlayedTiles.size(); i++) {
+            Overlay o = overlayedTiles.get(i);
+            g.drawImage(Tile.getTileById(o.getTileID()).getTexture(), (o.getTileX() * TileMap.TILE_WIDTH) + offsetX,
+                    (o.getTileY() * TileMap.TILE_HEIGHT) + offsetY,
+                    TileMap.TILE_WIDTH, TileMap.TILE_HEIGHT, null); // Draws a tile that is on a higher layer than the player.
+        }
     }
 
     public String getPlrLoc() {

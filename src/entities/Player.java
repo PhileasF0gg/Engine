@@ -31,18 +31,22 @@ public class Player extends Entity {
         if(InputHandler.upPressed() && y == destY && x == destX && !upCollide) { // If there is no collision one tile up.
             destY -= TileMap.TILE_HEIGHT; // A new destination is created for one tile up.
             dirY = -1;
+            dirX = 0;
         }
         if(InputHandler.downPressed() && y == destY && x == destX && !downCollide) { // If there is no collision one tile down.
             destY += TileMap.TILE_HEIGHT; // A new destination is created for one tile down.
             dirY = 1;
+            dirX = 0;
         }
         if(InputHandler.leftPressed() && y == destY && x == destX && !leftCollide) { // If there is no collision one tile left.
             destX -= TileMap.TILE_WIDTH; // A new destination is created for one tile left.
             dirX = -1;
+            dirY = 0;
         }
         if(InputHandler.rightPressed() && y == destY && x == destX && !rightCollide) { // If there is no collision one tile right.
             destX += TileMap.TILE_WIDTH; // A new destination is created for one tile right.
             dirX = 1;
+            dirY = 0;
         }
 
         moving = false;
