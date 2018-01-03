@@ -24,7 +24,8 @@ public class Tile {
             new Tile(Textures.tileTextures[i]); // Creates a tile object for every tile texture.
         }
         tiles.get(0).solid = true;
-        tiles.get(3).solid = true;
+        tiles.get(11).solid = true;
+        tiles.get(12).solid = true;
     }
 
     public int getId() {
