@@ -4,10 +4,11 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Tile {
-    private static ArrayList<Tile> tiles = new ArrayList<Tile>(); // Holds all the tile objects.
+    private static ArrayList<Tile> tiles = new ArrayList<>(); // Holds all the tile objects.
     private int id; // Holds the ID value for the tile.
+    private int uID;
     private BufferedImage texture;
-    private boolean solid = false, overlay = false;
+    private boolean solid = false, overlay = false, underlay = false;
 
     static {
         init_tiles();
@@ -26,10 +27,40 @@ public class Tile {
         tiles.get(0).solid = true;
         tiles.get(11).solid = true;
         tiles.get(12).solid = true;
+        tiles.get(24).solid = true;
+        tiles.get(25).solid = true;
+        tiles.get(26).solid = true;
+        tiles.get(27).solid = true;
+        tiles.get(28).solid = true;
+        tiles.get(29).solid = true;
+        tiles.get(33).solid = true;
+        tiles.get(34).solid = true;
+        tiles.get(35).solid = true;
+        tiles.get(37).solid = true;
+        tiles.get(38).solid = true;
+
+        for(int i = 14; i <= 38; i++) {
+            tiles.get(i).overlay = true;
+            tiles.get(i).useUnderlay(1);
+        }
     }
 
     public int getId() {
-        return id;
+        return id; // Returns the ID value of the tile.
+    }
+
+    public int getUnderlayID() {
+        return uID; // Returns the underlay ID.
+    }
+
+    public void useUnderlay(int underlayID) {
+        // Allows a separate back layer for another tile.
+        underlay = true;
+        uID = underlayID;
+    }
+
+    public boolean hasUnderlay() {
+        return underlay;
     }
 
     public boolean isSolid() {

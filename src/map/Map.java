@@ -89,6 +89,14 @@ public class Map {
                         }else {
                             overlayedTiles.add(new Overlay(m.getTileAt(ix, iy), ix, iy));
                         }
+
+                        if(Tile.getTileById(m.getTileAt(ix, iy)).hasUnderlay()) {
+                            g.drawImage(Tile.getTileById(Tile.getTileById(m.getTileAt(ix, iy)).getUnderlayID()).getTexture(),
+                                    (ix * m.TILE_WIDTH) + offsetX,
+                                    (iy * m.TILE_HEIGHT) + offsetY,
+                                    m.TILE_WIDTH, m.TILE_HEIGHT,
+                                    null); // Draws a tile as an underlay.
+                        }
                     }
                     if(InputHandler.isDevMode()) {
                         g.setColor(Color.WHITE);
