@@ -9,7 +9,7 @@ public class Textures {
     public static BufferedImage tileTextures[]; // Holds all of the tile textures corresponding to their ID values.
 
     public static void initTextures() {
-        tileTextures = new BufferedImage[39]; // Sets the amount of textures in use.
+        tileTextures = new BufferedImage[40]; // Sets the amount of textures in use.
         try {
             tileTextures[1] = ImageIO.read(Textures.class.getResourceAsStream("/grass.png"));
             tileTextures[2] = ImageIO.read(Textures.class.getResourceAsStream("/dirt.png"));
@@ -49,6 +49,7 @@ public class Textures {
             tileTextures[36] = ImageIO.read(Textures.class.getResourceAsStream("/house_main7.png"));
             tileTextures[37] = ImageIO.read(Textures.class.getResourceAsStream("/house_main8.png"));
             tileTextures[38] = ImageIO.read(Textures.class.getResourceAsStream("/house_main9.png"));
+            tileTextures[39] = ImageIO.read(Textures.class.getResourceAsStream("/house_int.png"));
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -43,6 +43,13 @@ public class Tile {
             tiles.get(i).overlay = true;
             tiles.get(i).useUnderlay(1);
         }
+
+        tiles.get(30).useUnderlay(39);
+        tiles.get(31).useUnderlay(39);
+        tiles.get(32).useUnderlay(39);
+        tiles.get(35).useUnderlay(39);
+        tiles.get(36).useUnderlay(39);
+        tiles.get(37).useUnderlay(39);
     }
 
     public int getId() {
