@@ -52,18 +52,34 @@ public class Player extends Entity {
         moving = false;
 
         if(x < destX && dirX == 1) {
-            x += speed;
+            if (x + speed > destX) {
+                x += speed - ((x + speed) - destX);
+            }else {
+                x += speed;
+            }
             moving = true;
         }else if(x > destX && dirX == -1) {
-            x -= speed;
+            if(x - speed < destX) {
+                x -= speed + (x - speed) - destX;
+            }else {
+                x -= speed;
+            }
             moving = true;
         }
 
         if(y < destY && dirY == 1) {
-            y += speed;
+            if (y + speed > destY) {
+                y += speed - ((y + speed) - destY);
+            }else {
+                y += speed;
+            }
             moving = true;
         }else if(y > destY && dirY == -1) {
-            y -= speed;
+            if(y - speed < destY) {
+                y -= speed + (y - speed) - destY;
+            }else {
+                y -= speed;
+            }
             moving = true;
         }
 

@@ -2,21 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be52e3ee-e070-4c8a-a4d3-facd1c55482a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/entities/Player.class" afterPath="$PROJECT_DIR$/out/production/Engine/entities/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_main0.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_main0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_main4.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_main4.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_main5.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_main5.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_main6.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_main6.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_main8.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_main8.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_main9.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_main9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/map/Textures.class" afterPath="$PROJECT_DIR$/out/production/Engine/map/Textures.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/map/Tile.class" afterPath="$PROJECT_DIR$/out/production/Engine/map/Tile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof0.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof1.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof10.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof11.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof13.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof14.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof2.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof3.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof4.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof5.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof6.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof7.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof8.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/house_roof9.png" afterPath="$PROJECT_DIR$/out/production/Engine/house_roof9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/map/Map.class" afterPath="$PROJECT_DIR$/out/production/Engine/map/Map.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_main0.png" afterPath="$PROJECT_DIR$/res/house_main0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_main4.png" afterPath="$PROJECT_DIR$/res/house_main4.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_main5.png" afterPath="$PROJECT_DIR$/res/house_main5.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_main6.png" afterPath="$PROJECT_DIR$/res/house_main6.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_main8.png" afterPath="$PROJECT_DIR$/res/house_main8.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_main9.png" afterPath="$PROJECT_DIR$/res/house_main9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof0.png" afterPath="$PROJECT_DIR$/res/house_roof0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof1.png" afterPath="$PROJECT_DIR$/res/house_roof1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof10.png" afterPath="$PROJECT_DIR$/res/house_roof10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof11.png" afterPath="$PROJECT_DIR$/res/house_roof11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof13.png" afterPath="$PROJECT_DIR$/res/house_roof13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof14.png" afterPath="$PROJECT_DIR$/res/house_roof14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof2.png" afterPath="$PROJECT_DIR$/res/house_roof2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof3.png" afterPath="$PROJECT_DIR$/res/house_roof3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof4.png" afterPath="$PROJECT_DIR$/res/house_roof4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof5.png" afterPath="$PROJECT_DIR$/res/house_roof5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof6.png" afterPath="$PROJECT_DIR$/res/house_roof6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof7.png" afterPath="$PROJECT_DIR$/res/house_roof7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof8.png" afterPath="$PROJECT_DIR$/res/house_roof8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/house_roof9.png" afterPath="$PROJECT_DIR$/res/house_roof9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Engine/test.tm" afterPath="$PROJECT_DIR$/out/production/Engine/test.tm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/test.tm" afterPath="$PROJECT_DIR$/res/test.tm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map/Textures.java" afterPath="$PROJECT_DIR$/src/map/Textures.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map/Tile.java" afterPath="$PROJECT_DIR$/src/map/Tile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/entities/Player.java" afterPath="$PROJECT_DIR$/src/entities/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map/Map.java" afterPath="$PROJECT_DIR$/src/map/Map.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/entities/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding>
                 <element signature="e#383#384#0" expanded="true" />
                 <element signature="e#407#408#0" expanded="true" />
@@ -44,13 +74,13 @@
       <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/map/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="82" column="60" lean-forward="false" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
+            <state relative-caret-position="1175">
+              <caret line="89" column="9" lean-forward="false" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#180#189#0" expanded="true" />
-                <element signature="e#5772#5773#0" expanded="true" />
-                <element signature="e#5830#5831#0" expanded="true" />
+                <element signature="e#6494#6495#0" expanded="true" />
+                <element signature="e#6552#6553#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/src/map/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1671#1672#0" expanded="true" />
@@ -103,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/src/map/TileMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-186">
-              <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,7 +159,7 @@
         <entry file="file://$PROJECT_DIR$/res/test.tm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+              <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -150,30 +180,30 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/entities/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="72" column="35" lean-forward="false" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+            <state relative-caret-position="750">
+              <caret line="81" column="13" lean-forward="false" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2956#2957#0" expanded="true" />
-                <element signature="e#2991#2992#0" expanded="true" />
-                <element signature="e#3036#3037#0" expanded="true" />
-                <element signature="e#3072#3073#0" expanded="true" />
-                <element signature="e#3114#3115#0" expanded="true" />
-                <element signature="e#3147#3148#0" expanded="true" />
-                <element signature="e#3191#3192#0" expanded="true" />
-                <element signature="e#3226#3227#0" expanded="true" />
-                <element signature="e#3258#3259#0" expanded="true" />
-                <element signature="e#3332#3333#0" expanded="true" />
-                <element signature="e#3364#3365#0" expanded="true" />
-                <element signature="e#3438#3439#0" expanded="true" />
-                <element signature="e#3467#3468#0" expanded="true" />
-                <element signature="e#3521#3522#0" expanded="true" />
-                <element signature="e#3550#3551#0" expanded="true" />
-                <element signature="e#3604#3605#0" expanded="true" />
-                <element signature="e#3632#3633#0" expanded="true" />
-                <element signature="e#3687#3688#0" expanded="true" />
-                <element signature="e#3715#3716#0" expanded="true" />
-                <element signature="e#3770#3771#0" expanded="true" />
+                <element signature="e#3458#3459#0" expanded="true" />
+                <element signature="e#3493#3494#0" expanded="true" />
+                <element signature="e#3538#3539#0" expanded="true" />
+                <element signature="e#3574#3575#0" expanded="true" />
+                <element signature="e#3616#3617#0" expanded="true" />
+                <element signature="e#3649#3650#0" expanded="true" />
+                <element signature="e#3693#3694#0" expanded="true" />
+                <element signature="e#3728#3729#0" expanded="true" />
+                <element signature="e#3760#3761#0" expanded="true" />
+                <element signature="e#3834#3835#0" expanded="true" />
+                <element signature="e#3866#3867#0" expanded="true" />
+                <element signature="e#3940#3941#0" expanded="true" />
+                <element signature="e#3969#3970#0" expanded="true" />
+                <element signature="e#4023#4024#0" expanded="true" />
+                <element signature="e#4052#4053#0" expanded="true" />
+                <element signature="e#4106#4107#0" expanded="true" />
+                <element signature="e#4134#4135#0" expanded="true" />
+                <element signature="e#4189#4190#0" expanded="true" />
+                <element signature="e#4217#4218#0" expanded="true" />
+                <element signature="e#4272#4273#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,12 +236,12 @@
         <option value="$PROJECT_DIR$/src/main/Engine.java" />
         <option value="$PROJECT_DIR$/src/map/TileMap.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/entities/Player.java" />
         <option value="$PROJECT_DIR$/src/map/Overlay.java" />
         <option value="$PROJECT_DIR$/src/map/Tile.java" />
         <option value="$PROJECT_DIR$/src/map/Textures.java" />
         <option value="$PROJECT_DIR$/res/test.tm" />
         <option value="$PROJECT_DIR$/src/map/Map.java" />
+        <option value="$PROJECT_DIR$/src/entities/Player.java" />
       </list>
     </option>
   </component>
@@ -543,26 +573,26 @@
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2956#2957#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-            <element signature="e#3036#3037#0" expanded="true" />
-            <element signature="e#3072#3073#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3147#3148#0" expanded="true" />
-            <element signature="e#3191#3192#0" expanded="true" />
-            <element signature="e#3226#3227#0" expanded="true" />
-            <element signature="e#3258#3259#0" expanded="true" />
-            <element signature="e#3332#3333#0" expanded="true" />
-            <element signature="e#3364#3365#0" expanded="true" />
-            <element signature="e#3438#3439#0" expanded="true" />
-            <element signature="e#3467#3468#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3550#3551#0" expanded="true" />
-            <element signature="e#3604#3605#0" expanded="true" />
-            <element signature="e#3632#3633#0" expanded="true" />
-            <element signature="e#3687#3688#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-            <element signature="e#3770#3771#0" expanded="true" />
+            <element signature="e#3458#3459#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#3538#3539#0" expanded="true" />
+            <element signature="e#3574#3575#0" expanded="true" />
+            <element signature="e#3616#3617#0" expanded="true" />
+            <element signature="e#3649#3650#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#3728#3729#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3834#3835#0" expanded="true" />
+            <element signature="e#3866#3867#0" expanded="true" />
+            <element signature="e#3940#3941#0" expanded="true" />
+            <element signature="e#3969#3970#0" expanded="true" />
+            <element signature="e#4023#4024#0" expanded="true" />
+            <element signature="e#4052#4053#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4134#4135#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="e#4272#4273#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,8 +604,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#180#189#0" expanded="true" />
-            <element signature="e#5772#5773#0" expanded="true" />
-            <element signature="e#5830#5831#0" expanded="true" />
+            <element signature="e#6494#6495#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -642,8 +672,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#180#189#0" expanded="true" />
-            <element signature="e#5772#5773#0" expanded="true" />
-            <element signature="e#5830#5831#0" expanded="true" />
+            <element signature="e#6494#6495#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -687,26 +717,26 @@
           <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2956#2957#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-            <element signature="e#3036#3037#0" expanded="true" />
-            <element signature="e#3072#3073#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3147#3148#0" expanded="true" />
-            <element signature="e#3191#3192#0" expanded="true" />
-            <element signature="e#3226#3227#0" expanded="true" />
-            <element signature="e#3258#3259#0" expanded="true" />
-            <element signature="e#3332#3333#0" expanded="true" />
-            <element signature="e#3364#3365#0" expanded="true" />
-            <element signature="e#3438#3439#0" expanded="true" />
-            <element signature="e#3467#3468#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3550#3551#0" expanded="true" />
-            <element signature="e#3604#3605#0" expanded="true" />
-            <element signature="e#3632#3633#0" expanded="true" />
-            <element signature="e#3687#3688#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-            <element signature="e#3770#3771#0" expanded="true" />
+            <element signature="e#3458#3459#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#3538#3539#0" expanded="true" />
+            <element signature="e#3574#3575#0" expanded="true" />
+            <element signature="e#3616#3617#0" expanded="true" />
+            <element signature="e#3649#3650#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#3728#3729#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3834#3835#0" expanded="true" />
+            <element signature="e#3866#3867#0" expanded="true" />
+            <element signature="e#3940#3941#0" expanded="true" />
+            <element signature="e#3969#3970#0" expanded="true" />
+            <element signature="e#4023#4024#0" expanded="true" />
+            <element signature="e#4052#4053#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4134#4135#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="e#4272#4273#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -825,7 +855,7 @@
     <entry file="file://$PROJECT_DIR$/src/entities/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding>
             <element signature="e#383#384#0" expanded="true" />
             <element signature="e#407#408#0" expanded="true" />
@@ -833,38 +863,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/Overlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="82" lean-forward="false" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
-          <folding>
-            <element signature="e#320#321#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="82" column="60" lean-forward="false" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#180#189#0" expanded="true" />
-            <element signature="e#5772#5773#0" expanded="true" />
-            <element signature="e#5830#5831#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/map/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1671#1672#0" expanded="true" />
@@ -888,7 +890,7 @@
     <entry file="file://$PROJECT_DIR$/src/map/TileMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-186">
-          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -908,7 +910,7 @@
     <entry file="file://$PROJECT_DIR$/res/test.tm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -923,32 +925,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/map/Overlay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="72" column="35" lean-forward="false" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+        <state relative-caret-position="100">
+          <caret line="4" column="82" lean-forward="false" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
+          <folding>
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1175">
+          <caret line="89" column="9" lean-forward="false" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2956#2957#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-            <element signature="e#3036#3037#0" expanded="true" />
-            <element signature="e#3072#3073#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3147#3148#0" expanded="true" />
-            <element signature="e#3191#3192#0" expanded="true" />
-            <element signature="e#3226#3227#0" expanded="true" />
-            <element signature="e#3258#3259#0" expanded="true" />
-            <element signature="e#3332#3333#0" expanded="true" />
-            <element signature="e#3364#3365#0" expanded="true" />
-            <element signature="e#3438#3439#0" expanded="true" />
-            <element signature="e#3467#3468#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3550#3551#0" expanded="true" />
-            <element signature="e#3604#3605#0" expanded="true" />
-            <element signature="e#3632#3633#0" expanded="true" />
-            <element signature="e#3687#3688#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-            <element signature="e#3770#3771#0" expanded="true" />
+            <element signature="e#180#189#0" expanded="true" />
+            <element signature="e#6494#6495#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="81" column="13" lean-forward="false" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3458#3459#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#3538#3539#0" expanded="true" />
+            <element signature="e#3574#3575#0" expanded="true" />
+            <element signature="e#3616#3617#0" expanded="true" />
+            <element signature="e#3649#3650#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#3728#3729#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3834#3835#0" expanded="true" />
+            <element signature="e#3866#3867#0" expanded="true" />
+            <element signature="e#3940#3941#0" expanded="true" />
+            <element signature="e#3969#3970#0" expanded="true" />
+            <element signature="e#4023#4024#0" expanded="true" />
+            <element signature="e#4052#4053#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4134#4135#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="e#4272#4273#0" expanded="true" />
           </folding>
         </state>
       </provider>
