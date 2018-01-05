@@ -1,15 +1,21 @@
 package map;
 
+import com.sun.prism.Texture;
+
 import javax.imageio.ImageIO;
+import javax.xml.soap.Text;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Textures {
 
     public static BufferedImage tileTextures[]; // Holds all of the tile textures corresponding to their ID values.
+    public static BufferedImage playerTextures[]; // Holds all the textures for player animation.
 
     public static void initTextures() {
         tileTextures = new BufferedImage[40]; // Sets the amount of textures in use.
+        playerTextures = new BufferedImage[12];
         try {
             tileTextures[1] = ImageIO.read(Textures.class.getResourceAsStream("/grass.png"));
             tileTextures[2] = ImageIO.read(Textures.class.getResourceAsStream("/dirt.png"));
@@ -50,7 +56,18 @@ public class Textures {
             tileTextures[37] = ImageIO.read(Textures.class.getResourceAsStream("/house_main8.png"));
             tileTextures[38] = ImageIO.read(Textures.class.getResourceAsStream("/house_main9.png"));
             tileTextures[39] = ImageIO.read(Textures.class.getResourceAsStream("/house_int.png"));
-
+            playerTextures[0] = ImageIO.read(Textures.class.getResourceAsStream("/walk_d0.png"));
+            playerTextures[1] = ImageIO.read(Textures.class.getResourceAsStream("/walk_d1.png"));
+            playerTextures[2] = ImageIO.read(Textures.class.getResourceAsStream("/walk_d2.png"));
+            playerTextures[3] = ImageIO.read(Textures.class.getResourceAsStream("/walk_l0.png"));
+            playerTextures[4] = ImageIO.read(Textures.class.getResourceAsStream("/walk_l1.png"));
+            playerTextures[5] = ImageIO.read(Textures.class.getResourceAsStream("/walk_l2.png"));
+            playerTextures[6] = ImageIO.read(Textures.class.getResourceAsStream("/walk_r0.png"));
+            playerTextures[7] = ImageIO.read(Textures.class.getResourceAsStream("/walk_r1.png"));
+            playerTextures[8] = ImageIO.read(Textures.class.getResourceAsStream("/walk_r2.png"));
+            playerTextures[9] = ImageIO.read(Textures.class.getResourceAsStream("/walk_u0.png"));
+            playerTextures[10] = ImageIO.read(Textures.class.getResourceAsStream("/walk_u1.png"));
+            playerTextures[11] = ImageIO.read(Textures.class.getResourceAsStream("/walk_u2.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

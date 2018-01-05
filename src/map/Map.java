@@ -97,6 +97,13 @@ public class Map {
             for (int ix = 0; ix < m.getWidth(); ix++) {
                 for (int iy = 0; iy < m.getHeight(); iy++) {
                     if (m.getTileAt(ix, iy) != 0) {
+                        if(Tile.getTileById(m.getTileAt(ix, iy)).hasUnderlay()) {
+                            g.drawImage(Tile.getTileById(Tile.getTileById(m.getTileAt(ix, iy)).getUnderlayID()).getTexture(),
+                                    (ix * m.TILE_WIDTH) + (int)offsetX,
+                                    (iy * m.TILE_HEIGHT) + (int)offsetY,
+                                    m.TILE_WIDTH, m.TILE_HEIGHT,
+                                    null); // Draws a tile as an underlay.
+                        }
                         if(!Tile.getTileById(m.getTileAt(ix, iy)).isOverlay()) {
                             g.drawImage(Tile.getTileById(m.getTileAt(ix, iy)).getTexture(),
                                     (ix * m.TILE_WIDTH) + (int)offsetX,
@@ -106,14 +113,6 @@ public class Map {
                             // The tile texture is drawn depending on its ID value.
                         }else {
                             overlayedTiles.add(new Overlay(m.getTileAt(ix, iy), ix, iy));
-                        }
-
-                        if(Tile.getTileById(m.getTileAt(ix, iy)).hasUnderlay()) {
-                            g.drawImage(Tile.getTileById(Tile.getTileById(m.getTileAt(ix, iy)).getUnderlayID()).getTexture(),
-                                    (ix * m.TILE_WIDTH) + (int)offsetX,
-                                    (iy * m.TILE_HEIGHT) + (int)offsetY,
-                                    m.TILE_WIDTH, m.TILE_HEIGHT,
-                                    null); // Draws a tile as an underlay.
                         }
                     }
                     if(InputHandler.isDevMode()) {
