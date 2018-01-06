@@ -19,7 +19,7 @@ public class Map {
         maps.add(new TileMap(20, 20)); // (Map ID: 0) is just a test map.
         maps.get(0).load("res/test.tm"); // Loads the test map file.
         currentMap = -1; // The game will not try to render if the map value is smaller than 0.
-        p = new Player(0, 0);
+        p = new Player(0, 1);
     }
 
     public void update() {
@@ -71,22 +71,34 @@ public class Map {
         // The players view will follow the specified focus point.
         //offsetX = (Engine.WIDTH / 2) - x;
         float jumpX = 0, jumpY = 0;
-        if(offsetX > (Engine.WIDTH / 2) - x) {
+        if(offsetX > (Engine.WIDTH / 2) - x && offsetX + (maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) >= Engine.WIDTH) {
             jumpX = (offsetX - ((Engine.WIDTH / 2) - x)) / 20;
             offsetX -= jumpX;
+            if(offsetX + (maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) < Engine.WIDTH) {
+                offsetX = Engine.WIDTH - (maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH);
+            }
         }
-        if(offsetX < (Engine.WIDTH / 2) - x) {
+        if(offsetX < (Engine.WIDTH / 2) - x && offsetX <= 0) {
             jumpX = (((Engine.WIDTH / 2) - x) - offsetX) / 20;
             offsetX += jumpX;
+            if(offsetX > 0) {
+                offsetX = 0;
+            }
         }
         //offsetY = (Engine.HEIGHT / 2) - y;
-        if(offsetY > (Engine.HEIGHT / 2) - y) {
+        if(offsetY > (Engine.HEIGHT / 2) - y && offsetY + (maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) >= Engine.HEIGHT) {
             jumpY = (offsetY - ((Engine.HEIGHT / 2) - y)) / 20;
             offsetY -= jumpY;
+            if(offsetY + (maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) < Engine.HEIGHT) {
+                offsetY = Engine.HEIGHT - (maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT);
+            }
         }
-        if(offsetY < (Engine.HEIGHT / 2) - y) {
+        if(offsetY < (Engine.HEIGHT / 2) - y && offsetY <= 0) {
             jumpY = (((Engine.HEIGHT / 2) - y) - offsetY) / 20;
             offsetY += jumpY;
+            if(offsetY > 0) {
+                offsetY = 0;
+            }
         }
     }
 
