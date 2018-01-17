@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Map {
 
     private static ArrayList<TileMap> maps = new ArrayList<TileMap>(); // Holds all of the TileMap objects.
-    private float offsetX, offsetY, scaleFactor = 2;
+    private float offsetX, offsetY, scaleFactor = 1.2f;
     private int currentMap;
     private Player p;
     private ArrayList<Overlay> overlayedTiles;
@@ -69,7 +69,9 @@ public class Map {
 
     private void setFocusPoint(int x, int y) {
         // The players view will follow the specified focus point.
-        //offsetX = (Engine.WIDTH / 2) - x;
+        offsetX = ((Engine.WIDTH / 2) / scaleFactor) - x;
+
+        /*
         float jumpX = 0, jumpY = 0;
         if(maps.get(currentMap).getWidth() > Engine.WIDTH / TileMap.TILE_WIDTH) {
             if (offsetX > (Engine.WIDTH / 2) - x && offsetX + (maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) >= Engine.WIDTH) {
@@ -87,7 +89,11 @@ public class Map {
                 }
             }
         }
-        //offsetY = (Engine.HEIGHT / 2) - y;
+        */
+
+        offsetY = ((Engine.HEIGHT / 2) / scaleFactor) - y;
+
+        /*
         if(maps.get(currentMap).getHeight() > Engine.HEIGHT / TileMap.TILE_HEIGHT) {
             if (offsetY > (Engine.HEIGHT / 2) - y && offsetY + (maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) >= Engine.HEIGHT) {
                 jumpY = (offsetY - ((Engine.HEIGHT / 2) - y)) / 20;
@@ -104,6 +110,7 @@ public class Map {
                 }
             }
         }
+        */
     }
 
     public void draw(Graphics g) {
