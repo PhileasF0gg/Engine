@@ -11,7 +11,7 @@ public abstract class Entity {
     }
 
     public abstract void update();
-    public abstract void draw(Graphics g, int offsetX, int offsetY);
+    public abstract void draw(Graphics g, int offsetX, int offsetY, float scaleFactor);
 
     public int getX() {
         return x;

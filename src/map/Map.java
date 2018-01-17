@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Map {
 
     private static ArrayList<TileMap> maps = new ArrayList<TileMap>(); // Holds all of the TileMap objects.
-    private float offsetX, offsetY;
+    private float offsetX, offsetY, scaleFactor = 2;
     private int currentMap;
     private Player p;
     private ArrayList<Overlay> overlayedTiles;
@@ -115,16 +115,16 @@ public class Map {
                     if (m.getTileAt(ix, iy) != 0) {
                         if(Tile.getTileById(m.getTileAt(ix, iy)).hasUnderlay()) {
                             g.drawImage(Tile.getTileById(Tile.getTileById(m.getTileAt(ix, iy)).getUnderlayID()).getTexture(),
-                                    (ix * m.TILE_WIDTH) + (int)offsetX,
-                                    (iy * m.TILE_HEIGHT) + (int)offsetY,
-                                    m.TILE_WIDTH, m.TILE_HEIGHT,
+                                    scale((ix * m.TILE_WIDTH) + (int)offsetX),
+                                    scale((iy * m.TILE_HEIGHT) + (int)offsetY),
+                                    scale(m.TILE_WIDTH), scale(m.TILE_HEIGHT),
                                     null); // Draws a tile as an underlay.
                         }
                         if(!Tile.getTileById(m.getTileAt(ix, iy)).isOverlay()) {
                             g.drawImage(Tile.getTileById(m.getTileAt(ix, iy)).getTexture(),
-                                    (ix * m.TILE_WIDTH) + (int)offsetX,
-                                    (iy * m.TILE_HEIGHT) + (int)offsetY,
-                                    m.TILE_WIDTH, m.TILE_HEIGHT,
+                                    scale((ix * m.TILE_WIDTH) + (int)offsetX),
+                                    scale((iy * m.TILE_HEIGHT) + (int)offsetY),
+                                    scale(m.TILE_WIDTH), scale(m.TILE_HEIGHT),
                                     null);
                             // The tile texture is drawn depending on its ID value.
                         }else {
@@ -136,25 +136,31 @@ public class Map {
                         if(ix == (p.getX() + (p.getW() / 2)) / m.TILE_WIDTH && iy == (p.getY() + (p.getH() / 2)) / m.TILE_HEIGHT) {
                             // Draws a yellow patch under the player in developer mode.
                             g.setColor(Color.YELLOW);
-                            g.fillRect((ix * m.TILE_WIDTH) + (int)offsetX, (iy * m.TILE_HEIGHT) + (int)offsetY, m.TILE_WIDTH, m.TILE_HEIGHT);
+                            g.fillRect(scale((ix * m.TILE_WIDTH) + (int)offsetX), scale((iy * m.TILE_HEIGHT) + (int)offsetY),
+                                    scale(m.TILE_WIDTH), scale(m.TILE_HEIGHT));
                         }
-                        g.drawRect((ix * m.TILE_WIDTH) + (int)offsetX, (iy * m.TILE_HEIGHT) + (int)offsetY, m.TILE_WIDTH, m.TILE_HEIGHT);
+                        g.drawRect(scale((ix * m.TILE_WIDTH) + (int)offsetX), scale((iy * m.TILE_HEIGHT) + (int)offsetY),
+                                scale(m.TILE_WIDTH), scale(m.TILE_HEIGHT));
                         // A white grid is overlaid over the map for testing purposes.
                     }
                 }
             }
         }
-        p.draw(g, (int)offsetX, (int)offsetY);
+        p.draw(g, (int)offsetX, (int)offsetY, scaleFactor);
         drawOverlay(g);
     }
 
     private void drawOverlay(Graphics g) {
         for(int i = 0; i < overlayedTiles.size(); i++) {
             Overlay o = overlayedTiles.get(i);
-            g.drawImage(Tile.getTileById(o.getTileID()).getTexture(), (o.getTileX() * TileMap.TILE_WIDTH) + (int)offsetX,
-                    (o.getTileY() * TileMap.TILE_HEIGHT) + (int)offsetY,
-                    TileMap.TILE_WIDTH, TileMap.TILE_HEIGHT, null); // Draws a tile that is on a higher layer than the player.
+            g.drawImage(Tile.getTileById(o.getTileID()).getTexture(), scale((o.getTileX() * TileMap.TILE_WIDTH) + (int)offsetX),
+                    scale((o.getTileY() * TileMap.TILE_HEIGHT) + (int)offsetY),
+                    scale(TileMap.TILE_WIDTH), scale(TileMap.TILE_HEIGHT), null); // Draws a tile that is on a higher layer than the player.
         }
+    }
+
+    public int scale(int num) {
+        return (int)(num * scaleFactor);
     }
 
     public String getPlrLoc() {
