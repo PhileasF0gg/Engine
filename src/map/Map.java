@@ -13,6 +13,7 @@ public class Map {
     private int currentMap;
     private Player p;
     private ArrayList<Overlay> overlayedTiles;
+    private boolean resizing = false; // Is true if the map is in the process of resizing.
 
     public Map() {
         Textures.initTextures();
@@ -24,14 +25,17 @@ public class Map {
 
     public void update() {
         if(InputHandler.isDevMode() && InputHandler.zoomInPressed()) {
-            scaleFactor += 0.1;
+            scaleFactor += 0.1; // Scales the map up.
+            resizing = true;
         }
         if(InputHandler.isDevMode() && InputHandler.zoomOutPressed()) {
-            scaleFactor -= 0.1;
+            scaleFactor -= 0.1; // Scales the map down.
+            resizing = true;
         }
         checkPlayerCollision();
         p.update();
         setFocusPoint(p.getX(), p.getY());
+
     }
 
     private void checkPlayerCollision() {
@@ -78,20 +82,25 @@ public class Map {
         //offsetX = (Engine.WIDTH / 2) - scale(x);
 
         float jumpX = 0, jumpY = 0;
+        if(resizing) {
+            offsetX = (Engine.WIDTH / 2) - scale(x);
+            offsetY = (Engine.HEIGHT / 2) - scale(y);
+            resizing = false;
+        }
         if(maps.get(currentMap).getWidth() > Engine.WIDTH / TileMap.TILE_WIDTH) { // If the map is wider than the screen.
             if (offsetX > (Engine.WIDTH / 2) - scale(x) && offsetX + scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) >= Engine.WIDTH) {
                 jumpX = (offsetX - ((Engine.WIDTH / 2) - scale(x))) / 20;
                 offsetX -= jumpX;
-                if (offsetX + scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) < Engine.WIDTH) {
-                    offsetX = Engine.WIDTH - scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH);
-                }
+            }
+            if (offsetX + scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) < Engine.WIDTH) {
+                offsetX = Engine.WIDTH - scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH);
             }
             if (offsetX < (Engine.WIDTH / 2) - scale(x) && offsetX <= 0) {
                 jumpX = (((Engine.WIDTH / 2) - scale(x)) - offsetX) / 20;
                 offsetX += jumpX;
-                if (offsetX > 0) {
-                    offsetX = 0;
-                }
+            }
+            if (offsetX > 0) {
+                offsetX = 0;
             }
         }
 
@@ -101,16 +110,16 @@ public class Map {
             if (offsetY > (Engine.HEIGHT / 2) - scale(y) && offsetY + scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) >= Engine.HEIGHT) {
                 jumpY = (offsetY - ((Engine.HEIGHT / 2) - scale(y))) / 20;
                 offsetY -= jumpY;
-                if (offsetY + scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) < Engine.HEIGHT) {
-                    offsetY = Engine.HEIGHT - scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT);
-                }
+            }
+            if (offsetY + scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) < Engine.HEIGHT) {
+                offsetY = Engine.HEIGHT - scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT);
             }
             if (offsetY < (Engine.HEIGHT / 2) - scale(y) && offsetY <= 0) {
                 jumpY = (((Engine.HEIGHT / 2) - scale(y)) - offsetY) / 20;
                 offsetY += jumpY;
-                if (offsetY > 0) {
-                    offsetY = 0;
-                }
+            }
+            if (offsetY > 0) {
+                offsetY = 0;
             }
         }
     }
