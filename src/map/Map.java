@@ -172,13 +172,13 @@ public class Map {
         for(int i = 0; i < overlayedTiles.size(); i++) {
             Overlay o = overlayedTiles.get(i);
             g.drawImage(Tile.getTileById(o.getTileID()).getTexture(), scale((o.getTileX() * TileMap.TILE_WIDTH)) + (int)offsetX,
-                    scale((o.getTileY() * TileMap.TILE_HEIGHT)) +  + (int)offsetY,
+                    scale((o.getTileY() * TileMap.TILE_HEIGHT)) + (int)offsetY,
                     scale(TileMap.TILE_WIDTH), scale(TileMap.TILE_HEIGHT), null); // Draws a tile that is on a higher layer than the player.
         }
     }
 
     public int scale(int num) {
-        return (int)(num * scaleFactor);
+        return Math.round(num * scaleFactor);
     }
 
     public String getPlrLoc() {
