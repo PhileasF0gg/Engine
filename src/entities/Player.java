@@ -235,8 +235,8 @@ public class Player extends Entity {
         //.setColor(Color.DARK_GRAY);
         //g.fillOval(x + offsetX, y + offsetY, w, h);
         g.drawImage(Textures.playerTextures[animID],
-                (int)(scaleFactor * (((x + (w/2)) - TileMap.TILE_WIDTH/2) + offsetX)),
-                (int)(scaleFactor * (((y + (h/2)) - TileMap.TILE_HEIGHT/2) - TileMap.TILE_HEIGHT + offsetY)),
+                (int)(scaleFactor * (((x + (w/2)) - TileMap.TILE_WIDTH/2))) + offsetX,
+                (int)(scaleFactor * (((y + (h/2)) - TileMap.TILE_HEIGHT/2) - TileMap.TILE_HEIGHT)) + offsetY,
                 (int)(scaleFactor * TileMap.TILE_WIDTH), (int)(scaleFactor * TileMap.TILE_HEIGHT * 2), null);
     }
 
