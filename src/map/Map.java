@@ -23,6 +23,12 @@ public class Map {
     }
 
     public void update() {
+        if(InputHandler.isDevMode() && InputHandler.zoomInPressed()) {
+            scaleFactor += 0.1;
+        }
+        if(InputHandler.isDevMode() && InputHandler.zoomOutPressed()) {
+            scaleFactor -= 0.1;
+        }
         checkPlayerCollision();
         p.update();
         setFocusPoint(p.getX(), p.getY());

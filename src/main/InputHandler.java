@@ -2,11 +2,19 @@ package main;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.security.Key;
 
 public class InputHandler extends KeyAdapter {
 
     private static String inputStatus = ""; // Only to be used for simple key presses. Game controls will have their own variables.
-    private static boolean devMode = false, keyUnstuck = true, left = false, right = false, up = false, down = false;
+    private static boolean devMode = false,
+            keyUnstuck = true,
+            left = false,
+            right = false,
+            up = false,
+            down = false,
+            zoomIn = false,
+            zoomOut = false;
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -22,6 +30,12 @@ public class InputHandler extends KeyAdapter {
         }
         if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
             right = true;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_EQUALS) {
+            zoomIn = true;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_MINUS) {
+            zoomOut = true;
         }
     }
 
@@ -39,6 +53,12 @@ public class InputHandler extends KeyAdapter {
         }
         if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
             right = false;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_EQUALS) {
+            zoomIn = false;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_MINUS) {
+            zoomOut = false;
         }
     }
 
@@ -73,7 +93,10 @@ public class InputHandler extends KeyAdapter {
         return left;
     }
 
-    public static boolean rightPressed() {
-        return right;
-    }
+    public static boolean rightPressed() { return right; }
+
+    public static boolean zoomInPressed() { return zoomIn; }
+
+    public static boolean zoomOutPressed() { return zoomOut; }
+
 }
