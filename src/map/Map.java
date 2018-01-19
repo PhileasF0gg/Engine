@@ -66,8 +66,6 @@ public class Map {
         }else {
             p.blockDown(true);
         }
-
-
     }
 
     public void setCurrentMap(int index) {
@@ -79,49 +77,57 @@ public class Map {
 
     private void setFocusPoint(int x, int y) {
         // The players view will follow the specified focus point.
-        //offsetX = (Engine.WIDTH / 2) - scale(x);
 
         float jumpX = 0, jumpY = 0;
+
         if(resizing) {
             offsetX = (Engine.WIDTH / 2) - scale(x);
             offsetY = (Engine.HEIGHT / 2) - scale(y);
             resizing = false;
         }
-        if(maps.get(currentMap).getWidth() > Engine.WIDTH / TileMap.TILE_WIDTH) { // If the map is wider than the screen.
-            if (offsetX > (Engine.WIDTH / 2) - scale(x) && offsetX + scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) >= Engine.WIDTH) {
-                jumpX = (offsetX - ((Engine.WIDTH / 2) - scale(x))) / 20;
-                offsetX -= jumpX;
-            }
-            if (offsetX + scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) < Engine.WIDTH) {
-                offsetX = Engine.WIDTH - scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH);
-            }
-            if (offsetX < (Engine.WIDTH / 2) - scale(x) && offsetX <= 0) {
-                jumpX = (((Engine.WIDTH / 2) - scale(x)) - offsetX) / 20;
-                offsetX += jumpX;
-            }
-            if (offsetX > 0) {
-                offsetX = 0;
-            }
+
+        // X OFFSET CALCULATIONS START.
+
+        //offsetX = (Engine.WIDTH / 2) - scale(x);
+
+        if (offsetX > (Engine.WIDTH / 2) - scale(x) && offsetX + scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) >= Engine.WIDTH) {
+            jumpX = (offsetX - ((Engine.WIDTH / 2) - scale(x))) / 20;
+            offsetX -= jumpX;
         }
+        if (offsetX + scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH) < Engine.WIDTH) {
+            offsetX = Engine.WIDTH - scale(maps.get(currentMap).getWidth() * TileMap.TILE_WIDTH);
+        }
+        if (offsetX < (Engine.WIDTH / 2) - scale(x) && offsetX <= 0) {
+            jumpX = (((Engine.WIDTH / 2) - scale(x)) - offsetX) / 20;
+            offsetX += jumpX;
+        }
+        if (offsetX > 0) {
+            offsetX = 0;
+        }
+
+        // X OFFSET CALCULATIONS STOP.
+
+        // Y OFFSET CALCULATIONS START.
 
         //offsetY = (Engine.HEIGHT / 2) - scale(y);
 
-        if(maps.get(currentMap).getHeight() > Engine.HEIGHT / TileMap.TILE_HEIGHT) {
-            if (offsetY > (Engine.HEIGHT / 2) - scale(y) && offsetY + scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) >= Engine.HEIGHT) {
-                jumpY = (offsetY - ((Engine.HEIGHT / 2) - scale(y))) / 20;
-                offsetY -= jumpY;
-            }
-            if (offsetY + scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) < Engine.HEIGHT) {
-                offsetY = Engine.HEIGHT - scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT);
-            }
-            if (offsetY < (Engine.HEIGHT / 2) - scale(y) && offsetY <= 0) {
-                jumpY = (((Engine.HEIGHT / 2) - scale(y)) - offsetY) / 20;
-                offsetY += jumpY;
-            }
-            if (offsetY > 0) {
-                offsetY = 0;
-            }
+        if (offsetY > (Engine.HEIGHT / 2) - scale(y) && offsetY + scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) >= Engine.HEIGHT) {
+            jumpY = (offsetY - ((Engine.HEIGHT / 2) - scale(y))) / 20;
+            offsetY -= jumpY;
         }
+        if (offsetY + scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT) < Engine.HEIGHT) {
+            offsetY = Engine.HEIGHT - scale(maps.get(currentMap).getHeight() * TileMap.TILE_HEIGHT);
+        }
+        if (offsetY < (Engine.HEIGHT / 2) - scale(y) && offsetY <= 0) {
+            jumpY = (((Engine.HEIGHT / 2) - scale(y)) - offsetY) / 20;
+            offsetY += jumpY;
+        }
+        if (offsetY > 0) {
+            offsetY = 0;
+        }
+
+        // Y OFFSET CALCULATIONS STOP.
+
     }
 
     public void draw(Graphics g) {
